@@ -1,0 +1,161 @@
+.uxd-locked-widget-notice {
+    text-align: center;
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    border-radius: 12px;
+    color: white;
+    margin: 20px 0;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.uxd-locked-icon {
+    font-size: 48px;
+    margin-bottom: 20px;
+    opacity: 0.9;
+}
+
+.uxd-locked-widget-notice h3 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+    font-weight: 600;
+    color: white;
+}
+
+.uxd-locked-widget-notice p {
+    margin: 0 0 25px 0;
+    font-size: 16px;
+    opacity: 0.9;
+    line-height: 1.5;
+}
+
+.uxd-locked-actions {
+    margin: 25px 0;
+}
+
+.uxd-btn {
+    display: inline-block;
+    padding: 14px 32px;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.uxd-btn-upgrade {
+    background: #ff6b6b;
+    color: white;
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.uxd-btn-upgrade:hover {
+    background: #ff5252;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 107, 107, 0.6);
+    color: white;
+    text-decoration: none;
+}
+
+.uxd-premium-features {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 8px;
+    padding: 25px;
+    margin-top: 25px;
+    backdrop-filter: blur(10px);
+    text-align: left;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.uxd-premium-features h4 {
+    margin: 0 0 15px 0;
+    font-size: 18px;
+    color: white;
+    text-align: center;
+    font-weight: 600;
+}
+
+.uxd-premium-features ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.uxd-premium-features li {
+    padding: 8px 0;
+    font-size: 14px;
+    opacity: 0.9;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.uxd-premium-features li:last-child {
+    border-bottom: none;
+}
+
+.uxd-locked-widget-preview {
+    position: relative;
+    min-height: 200px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .uxd-locked-widget-notice {
+        padding: 30px 15px;
+        margin: 15px 0;
+    }
+    
+    .uxd-locked-widget-notice h3 {
+        font-size: 20px;
+    }
+    
+    .uxd-locked-icon {
+        font-size: 36px;
+    }
+    
+    .uxd-btn {
+        padding: 12px 24px;
+        font-size: 14px;
+    }
+    
+    .uxd-premium-features {
+        padding: 20px;
+    }
+}
+
+/* Admin styles for locked widgets in editor */
+.elementor-widget-uxd-product-carousel-locked,
+.elementor-widget-uxd-product-grid-locked,
+.elementor-widget-uxd-taxonomy-accordion-locked,
+.elementor-widget-uxd-post-grid-locked {
+    position: relative;
+}
+
+.elementor-widget-uxd-product-carousel-locked::after,
+.elementor-widget-uxd-product-grid-locked::after,
+.elementor-widget-uxd-taxonomy-accordion-locked::after,
+.elementor-widget-uxd-post-grid-locked::after {
+    content: "🔒 Premium";
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: #ff6b6b;
+    color: white;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: bold;
+    z-index: 10;
+}
+
+/* Upgrade notice in controls */
+.uxd-upgrade-notice .elementor-control-raw-html {
+    background: transparent !important;
+    border: none !important;
+    padding: 0 !important;
+}

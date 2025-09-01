@@ -1,0 +1,518 @@
+/**
+ * UXD Premium Styles
+ */
+
+/* ====================================
+   PREMIUM WIDGET ENHANCEMENTS
+==================================== */
+
+/* Advanced Product Filter */
+.uxd-advanced-filter {
+    background: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.uxd-advanced-filter h3 {
+    margin-top: 0;
+    color: #333;
+    font-size: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #007cba;
+}
+
+.uxd-filter-search {
+    margin-bottom: 25px;
+}
+
+.uxd-filter-search input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid #e0e0e0;
+    border-radius: 6px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+.uxd-filter-search input:focus {
+    border-color: #007cba;
+    outline: none;
+}
+
+.uxd-filter-section {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.uxd-filter-section:last-child {
+    border-bottom: none;
+    margin-bottom: 0;
+    padding-bottom: 0;
+}
+
+.uxd-filter-section h4 {
+    color: #333;
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* Price Range Slider */
+.uxd-price-slider {
+    padding: 20px 0;
+}
+
+.uxd-price-range {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-weight: 600;
+    color: #007cba;
+}
+
+/* Filter Checkboxes */
+.uxd-filter-checkbox {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.uxd-filter-checkbox:hover {
+    color: #007cba;
+}
+
+.uxd-filter-checkbox input[type="checkbox"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+.uxd-filter-checkbox .count {
+    margin-left: auto;
+    color: #666;
+    font-size: 14px;
+}
+
+/* Rating Filter */
+.uxd-rating-filter {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.uxd-rating-option {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.uxd-rating-option:hover {
+    color: #007cba;
+}
+
+.uxd-rating-option input {
+    margin-right: 10px;
+}
+
+/* ====================================
+   PREMIUM ANIMATIONS
+==================================== */
+
+/* Smooth Loading Animation */
+@keyframes uxd-premium-pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.5; }
+}
+
+.uxd-premium-loading {
+    animation: uxd-premium-pulse 1.5s ease-in-out infinite;
+}
+
+/* Smooth Slide Animations */
+@keyframes uxd-slide-in-left {
+    0% {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes uxd-slide-in-right {
+    0% {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes uxd-slide-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to premium widgets */
+.uxd-premium-animate .uxd-product-item:nth-child(odd) {
+    animation: uxd-slide-in-left 0.6s ease-out forwards;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+.uxd-premium-animate .uxd-product-item:nth-child(even) {
+    animation: uxd-slide-in-right 0.6s ease-out forwards;
+    animation-delay: calc(var(--animation-order, 0) * 0.1s);
+}
+
+/* ====================================
+   PREMIUM HOVER EFFECTS
+==================================== */
+
+/* Advanced Image Hover Effects */
+.uxd-premium-hover-effect-1 .uxd-product-image {
+    overflow: hidden;
+    position: relative;
+}
+
+.uxd-premium-hover-effect-1 .uxd-product-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.6), transparent);
+    transition: left 0.6s ease;
+    z-index: 2;
+}
+
+.uxd-premium-hover-effect-1 .uxd-product-item:hover .uxd-product-image::before {
+    left: 100%;
+}
+
+/* Premium Glow Effect */
+.uxd-premium-glow:hover {
+    box-shadow: 0 0 20px rgba(0, 124, 186, 0.6);
+    transform: translateY(-5px);
+}
+
+/* Premium Tilt Effect */
+.uxd-premium-tilt:hover {
+    transform: perspective(1000px) rotateY(5deg) rotateX(5deg);
+}
+
+/* ====================================
+   PREMIUM LAYOUTS
+==================================== */
+
+/* Masonry Enhanced */
+.uxd-premium-masonry {
+    columns: 4;
+    column-gap: 20px;
+}
+
+.uxd-premium-masonry .uxd-product-item {
+    break-inside: avoid;
+    margin-bottom: 20px;
+    display: inline-block;
+    width: 100%;
+}
+
+/* Zigzag Layout */
+.uxd-premium-zigzag {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    align-items: center;
+}
+
+.uxd-premium-zigzag .uxd-product-item:nth-child(even) {
+    margin-top: 50px;
+}
+
+/* Overlapping Cards */
+.uxd-premium-overlap {
+    position: relative;
+}
+
+.uxd-premium-overlap .uxd-product-item:nth-child(n+2) {
+    margin-top: -30px;
+    margin-left: 20px;
+}
+
+/* ====================================
+   PREMIUM COMPONENTS
+==================================== */
+
+/* Premium Badge */
+.uxd-premium-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(45deg, #ff6b35, #f7931e);
+    color: white;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    z-index: 3;
+    animation: uxd-badge-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes uxd-badge-glow {
+    0% { box-shadow: 0 0 5px rgba(255, 107, 53, 0.5); }
+    100% { box-shadow: 0 0 15px rgba(255, 107, 53, 0.8); }
+}
+
+/* Premium Progress Bar */
+.uxd-premium-progress {
+    width: 100%;
+    height: 4px;
+    background: #e0e0e0;
+    border-radius: 2px;
+    overflow: hidden;
+    position: relative;
+    margin: 10px 0;
+}
+
+.uxd-premium-progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, #007cba, #00a0d2);
+    width: 0%;
+    transition: width 1s ease-in-out;
+    position: relative;
+}
+
+.uxd-premium-progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.5), transparent);
+    animation: uxd-progress-shine 2s linear infinite;
+}
+
+@keyframes uxd-progress-shine {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
+/* Premium Tooltip */
+.uxd-premium-tooltip {
+    position: relative;
+    cursor: help;
+}
+
+.uxd-premium-tooltip::before {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.uxd-premium-tooltip::after {
+    content: '';
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(100%);
+    border: 5px solid transparent;
+    border-top-color: rgba(0, 0, 0, 0.9);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+}
+
+.uxd-premium-tooltip:hover::before,
+.uxd-premium-tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(-5px);
+}
+
+/* ====================================
+   PREMIUM RESPONSIVE
+==================================== */
+
+@media (max-width: 1200px) {
+    .uxd-premium-masonry {
+        columns: 3;
+    }
+    
+    .uxd-premium-zigzag {
+        grid-template-columns: 1fr;
+    }
+    
+    .uxd-premium-zigzag .uxd-product-item:nth-child(even) {
+        margin-top: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .uxd-premium-masonry {
+        columns: 2;
+        column-gap: 15px;
+    }
+    
+    .uxd-premium-masonry .uxd-product-item {
+        margin-bottom: 15px;
+    }
+    
+    .uxd-premium-overlap .uxd-product-item:nth-child(n+2) {
+        margin-top: 0;
+        margin-left: 0;
+    }
+    
+    .uxd-advanced-filter {
+        padding: 20px;
+    }
+    
+    .uxd-filter-search input {
+        padding: 10px 14px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .uxd-premium-masonry {
+        columns: 1;
+        column-gap: 0;
+    }
+    
+    .uxd-advanced-filter {
+        padding: 15px;
+    }
+    
+    .uxd-advanced-filter h3 {
+        font-size: 18px;
+    }
+    
+    .uxd-filter-section h4 {
+        font-size: 14px;
+    }
+}
+
+/* ====================================
+   PREMIUM DARK MODE
+==================================== */
+
+@media (prefers-color-scheme: dark) {
+    .uxd-advanced-filter {
+        background: #2c3338;
+        color: #f0f0f1;
+    }
+    
+    .uxd-advanced-filter h3 {
+        color: #f0f0f1;
+        border-color: #00a0d2;
+    }
+    
+    .uxd-filter-search input {
+        background: #23282d;
+        color: #f0f0f1;
+        border-color: #5c6670;
+    }
+    
+    .uxd-filter-search input:focus {
+        border-color: #00a0d2;
+    }
+    
+    .uxd-filter-section {
+        border-color: #5c6670;
+    }
+    
+    .uxd-filter-section h4 {
+        color: #f0f0f1;
+    }
+    
+    .uxd-filter-checkbox:hover {
+        color: #00a0d2;
+    }
+    
+    .uxd-rating-option:hover {
+        color: #00a0d2;
+    }
+    
+    .uxd-premium-progress {
+        background: #23282d;
+    }
+}
+
+/* ====================================
+   PREMIUM ACCESSIBILITY
+==================================== */
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+    .uxd-advanced-filter {
+        border: 2px solid currentColor;
+    }
+    
+    .uxd-filter-search input {
+        border-width: 3px;
+    }
+    
+    .uxd-premium-badge {
+        background: #000;
+        border: 2px solid #fff;
+    }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    .uxd-premium-animate .uxd-product-item {
+        animation: none;
+    }
+    
+    .uxd-premium-progress-bar::after {
+        animation: none;
+    }
+    
+    .uxd-premium-badge {
+        animation: none;
+    }
+    
+    * {
+        transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
+    }
+}
+
+/* Focus Indicators */
+.uxd-filter-checkbox:focus-within {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+}
+
+.uxd-rating-option:focus-within {
+    outline: 2px solid #005fcc;
+    outline-offset: 2px;
+}
